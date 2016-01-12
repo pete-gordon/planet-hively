@@ -1,0 +1,111 @@
+Porting Guide for Planet Hively
+-------------------------------
+
+* When porting to a new platform, please make a new platform
+  section in the makefile where you can set compiler and linker
+  flags.
+
+* Try to keep any platform specific code inside #ifdef blocks
+  to keep portability.
+
+* Please email the binary for your port as well as any code
+  changes to pete@petergordon.org.uk so that the release can
+  be added to hivelytracker.com and any code changes can be
+  merged with the "official" source.
+
+* Feel free to optimise any routines; a lot of them are
+  quite slow.
+
+* You can set the following defines in the makefile if your target
+  platform requires them:
+  
+  -DDEFAULT_WIDTH=X
+  -DDEFAULT_HEIGHT=Y
+  
+    Sets the default resolution to XxY instead of 640x480.
+    Only set this if you really have to because Planet Hively's
+    design is based around 640x480, even though it does 
+    (more-or-less) scale.
+
+  -D__FIXED_RES__
+  
+    Set this if your target device has a fixed display mode
+    (which you can specify with DEFAULT_WIDTH and DEFAULT_HEIGHT).
+
+  -D__SW_SURFACE__
+  
+    If this is set, Planet Hively will always use a software
+    surface. Note that usually this is slower since the code doesn't
+    ever read from the surface buffer directly, however it might
+    be necessary if SDL hardware surfaces are problematic on your
+    target platform.
+
+  -D__HW_ONLY_WINDOWED__
+  
+    If this is set, Planet Hively will use a software surface in
+    fullscreen mode and a hardware one when windowed. Under windows
+    it seems to be the best way to do things.
+
+  -D__SURFACE32__
+
+    If this is set, Planet Hively will use a 32bit surface instead of
+    a 16bit one. Only set this if the target platform requires it for
+    PH to work, since this requires more CPU time, and significantly
+    more memory for no real gain (other than some slightly smoother
+    background gradients).
+
+  -D__EMBED_TUNES__
+  
+    If this is set, the tunes will be compiled into the binary,
+    very usefull for platforms that can't load the tunes as files.
+  
+  -D__NO_ARGS__
+  
+    This completely disables commandline argument parsing for targets
+    that don't have a command line.
+
+  -DINITIAL_VOL=n
+  
+    If the music is really loud on the default volume you can specify
+    this lets you specify a lower starting volume. n is in the range
+    0 to 16 (16 is full volume, and the default if this isn't set).
+
+  -D__NO_MOUSE__
+
+    If this is set, planet hively will be compiled in "joystick" mode
+    instead of "pointing device" mode (although pointing devices will
+    still work alongside the joystick). In this mode, planet hively
+    assumes an (at least) 2-button joystick, which controls the music
+    disk like this:
+    
+    Pressing up on the joystick scrolls the text view up
+    Pressing down on the joystick scrolls the text view down
+    
+    Holding the joystick towards a petal direction, and tapping button 1
+    will hit the corresponding petal on the rightmost flower (select a
+    tune).
+
+    Holding the joystick towards a petal direction, and tapping button 2
+    will hit the corresponding petal on the leftmost flower (select a
+    text to view).
+
+    Tapping button 1 with the joystick centred will reset the rightmost
+    flower.
+    
+    Tapping button 2 with the joystick centred will reset the leftmost
+    flower.
+    
+    Pressing both buttons together will close the text viewer.
+
+  -D__BROKEN_SDL_TIMER__
+
+    Normally, Planet Hively uses an SDL timer to update the on-screen elements
+    at a constant rate. This means that everything should move at the same
+    speed on both fast and slow systems. It also means that on fast systems
+    planet hively consumes as little CPU time as possible, and on slow systems
+    it renders as fast as it can, and even if the frame rate drops below the
+    target rate, everything still goes the right speed.
+    
+    On some targets, however, SDL timers appear to be broken. If your port seems
+    to only give a blank screen, try setting this. It should only ever be a
+    LAST resort, though.
