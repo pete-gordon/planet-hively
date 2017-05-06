@@ -76,6 +76,7 @@ PLATFORM = os4
 # PLATFORM = aix
 # PLATFORM = irix
 # PLATFORM = irix_marq
+# PLATFORM = pandora
 
 ####### DEFAULT SETTINGS HERE #######
 
@@ -407,7 +408,7 @@ ifeq ($(PLATFORM),irix)
 LFLAGS += -lSDL -lm
 endif
 
-# SGI IRIX
+#Â SGIÂ IRIX
 ifeq ($(PLATFORM),irix_marq)
 CFLAGS += `sdl-config --cflags` -D__SURFACE32__ -ffast-math
 LFLAGS += `sdl-config --libs` -lm
@@ -555,6 +556,13 @@ ifeq ($(PLATFORM),gp2x)
 CFLAGS += -static -DDEFAULT_WIDTH=320 -D__GP2X__ -DDEFAULT_HEIGHT=240 -D__FIXED_RES__ -D__SW_SURFACE__ -D__NO_MOUSE__ -fomit-frame-pointer -mcpu=arm920t -msoft-float
 LFLAGS += -static -lSDL -lpthread -lm -msoftfloat -mcpu=arm920t
 CC=arm-linux-gcc
+endif
+
+# Pandora with ptitSeb's Code::Blocks
+ifeq ($(PLATFORM),pandora)
+CFLAGS = -Ofast -pipe -mcpu=cortex-a8 -mfpu=neon -ftree-vectorize -mfloat-abi=softfp -fsingle-precision-constant -fuse-ld=gold -fuse-linker-plugin -fdiagnostics-color=auto -fsigned-char -mneon-for-64bits -mvectorize-with-neon-double -D__EMBED_TUNES__
+LFLAGS = -lSDL -lm
+CC = /mnt/utmp/codeblocks/usr/bin/gcc
 endif
 
 ####### SHOULDN'T HAVE TO CHANGE THIS STUFF #######
