@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA8DB188292C1719000D155E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8DB187292C1719000D155E /* Assets.xcassets */; };
+		DA8DB198292C17A7000D155E /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB195292C17A7000D155E /* SDLMain.m */; };
+		DA8DB19B292C18C1000D155E /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8DB19A292C18C1000D155E /* SDL.framework */; };
+		DA8DB19D292C18CE000D155E /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8DB19C292C18CE000D155E /* SDL2.framework */; };
+		DA8DB19F292C19AF000D155E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8DB19E292C19AF000D155E /* Cocoa.framework */; };
+		DA8DB1A2292C1A3C000D155E /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA8DB19C292C18CE000D155E /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA8DB1A3292C1A3F000D155E /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA8DB19A292C18C1000D155E /* SDL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA8DB1B1292C1B8B000D155E /* scrollbox.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB1A4292C1B8A000D155E /* scrollbox.c */; };
+		DA8DB1B2292C1B8B000D155E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB1A5292C1B8A000D155E /* main.c */; };
+		DA8DB1B3292C1B8B000D155E /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB1A8292C1B8A000D155E /* render.c */; };
+		DA8DB1B4292C1B8B000D155E /* hvl_replay.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB1A9292C1B8A000D155E /* hvl_replay.c */; };
+		DA8DB1B5292C1B8B000D155E /* shapes.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB1AB292C1B8B000D155E /* shapes.c */; };
+		DA8DB1B6292C1B8B000D155E /* fonts.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB1AD292C1B8B000D155E /* fonts.c */; };
+		DA8DB1B7292C1B8B000D155E /* text.c in Sources */ = {isa = PBXBuildFile; fileRef = DA8DB1AE292C1B8B000D155E /* text.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA8DB1A1292C1A31000D155E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA8DB1A3292C1A3F000D155E /* SDL.framework in CopyFiles */,
+				DA8DB1A2292C1A3C000D155E /* SDL2.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DA8DB181292C1718000D155E /* Planet-Hively.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Planet-Hively.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8DB187292C1719000D155E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA8DB18E292C1719000D155E /* Planet_Hively.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Planet_Hively.entitlements; sourceTree = "<group>"; };
+		DA8DB195292C17A7000D155E /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
+		DA8DB196292C17A7000D155E /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
+		DA8DB19A292C18C1000D155E /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Users/alexc/Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
+		DA8DB19C292C18CE000D155E /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Users/alexc/Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
+		DA8DB19E292C19AF000D155E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA8DB1A4292C1B8A000D155E /* scrollbox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scrollbox.c; path = ../scrollbox.c; sourceTree = "<group>"; };
+		DA8DB1A5292C1B8A000D155E /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../main.c; sourceTree = "<group>"; };
+		DA8DB1A6292C1B8A000D155E /* render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = render.h; path = ../render.h; sourceTree = "<group>"; };
+		DA8DB1A7292C1B8A000D155E /* hvl_replay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hvl_replay.h; path = ../hvl_replay.h; sourceTree = "<group>"; };
+		DA8DB1A8292C1B8A000D155E /* render.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = render.c; path = ../render.c; sourceTree = "<group>"; };
+		DA8DB1A9292C1B8A000D155E /* hvl_replay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hvl_replay.c; path = ../hvl_replay.c; sourceTree = "<group>"; };
+		DA8DB1AA292C1B8A000D155E /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../types.h; sourceTree = "<group>"; };
+		DA8DB1AB292C1B8B000D155E /* shapes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = shapes.c; path = ../shapes.c; sourceTree = "<group>"; };
+		DA8DB1AC292C1B8B000D155E /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = main.h; path = ../main.h; sourceTree = "<group>"; };
+		DA8DB1AD292C1B8B000D155E /* fonts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fonts.c; path = ../fonts.c; sourceTree = "<group>"; };
+		DA8DB1AE292C1B8B000D155E /* text.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = text.c; path = ../text.c; sourceTree = "<group>"; };
+		DA8DB1AF292C1B8B000D155E /* text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = text.h; path = ../text.h; sourceTree = "<group>"; };
+		DA8DB1B0292C1B8B000D155E /* shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shapes.h; path = ../shapes.h; sourceTree = "<group>"; };
+		DA8DB1BC292D3897000D155E /* Planet-Hively-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Planet-Hively-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA8DB17E292C1718000D155E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8DB19F292C19AF000D155E /* Cocoa.framework in Frameworks */,
+				DA8DB19B292C18C1000D155E /* SDL.framework in Frameworks */,
+				DA8DB19D292C18CE000D155E /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA8DB178292C1718000D155E = {
+			isa = PBXGroup;
+			children = (
+				DA8DB1BC292D3897000D155E /* Planet-Hively-Info.plist */,
+				DA8DB1AD292C1B8B000D155E /* fonts.c */,
+				DA8DB1A9292C1B8A000D155E /* hvl_replay.c */,
+				DA8DB1A7292C1B8A000D155E /* hvl_replay.h */,
+				DA8DB1A5292C1B8A000D155E /* main.c */,
+				DA8DB1AC292C1B8B000D155E /* main.h */,
+				DA8DB1A8292C1B8A000D155E /* render.c */,
+				DA8DB1A6292C1B8A000D155E /* render.h */,
+				DA8DB1A4292C1B8A000D155E /* scrollbox.c */,
+				DA8DB1AB292C1B8B000D155E /* shapes.c */,
+				DA8DB1B0292C1B8B000D155E /* shapes.h */,
+				DA8DB1AE292C1B8B000D155E /* text.c */,
+				DA8DB1AF292C1B8B000D155E /* text.h */,
+				DA8DB1AA292C1B8A000D155E /* types.h */,
+				DA8DB183292C1718000D155E /* macOS */,
+				DA8DB182292C1718000D155E /* Products */,
+				DA8DB199292C18C1000D155E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA8DB182292C1718000D155E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA8DB181292C1718000D155E /* Planet-Hively.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA8DB183292C1718000D155E /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				DA8DB196292C17A7000D155E /* SDLMain.h */,
+				DA8DB195292C17A7000D155E /* SDLMain.m */,
+				DA8DB187292C1719000D155E /* Assets.xcassets */,
+				DA8DB18E292C1719000D155E /* Planet_Hively.entitlements */,
+			);
+			name = macOS;
+			sourceTree = "<group>";
+		};
+		DA8DB199292C18C1000D155E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA8DB19E292C19AF000D155E /* Cocoa.framework */,
+				DA8DB19C292C18CE000D155E /* SDL2.framework */,
+				DA8DB19A292C18C1000D155E /* SDL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA8DB180292C1718000D155E /* Planet-Hively */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA8DB191292C1719000D155E /* Build configuration list for PBXNativeTarget "Planet-Hively" */;
+			buildPhases = (
+				DA8DB17D292C1718000D155E /* Sources */,
+				DA8DB17E292C1718000D155E /* Frameworks */,
+				DA8DB17F292C1718000D155E /* Resources */,
+				DA8DB1A1292C1A31000D155E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Planet-Hively";
+			productName = "Planet-Hively";
+			productReference = DA8DB181292C1718000D155E /* Planet-Hively.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA8DB179292C1718000D155E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DA8DB180292C1718000D155E = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = DA8DB17C292C1718000D155E /* Build configuration list for PBXProject "Planet-Hively" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA8DB178292C1718000D155E;
+			productRefGroup = DA8DB182292C1718000D155E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA8DB180292C1718000D155E /* Planet-Hively */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA8DB17F292C1718000D155E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8DB188292C1719000D155E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA8DB17D292C1718000D155E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8DB1B1292C1B8B000D155E /* scrollbox.c in Sources */,
+				DA8DB1B6292C1B8B000D155E /* fonts.c in Sources */,
+				DA8DB1B3292C1B8B000D155E /* render.c in Sources */,
+				DA8DB198292C17A7000D155E /* SDLMain.m in Sources */,
+				DA8DB1B7292C1B8B000D155E /* text.c in Sources */,
+				DA8DB1B5292C1B8B000D155E /* shapes.c in Sources */,
+				DA8DB1B4292C1B8B000D155E /* hvl_replay.c in Sources */,
+				DA8DB1B2292C1B8B000D155E /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DA8DB18F292C1719000D155E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = __EMBED_TUNES__;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA8DB190292C1719000D155E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = __EMBED_TUNES__;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA8DB192292C1719000D155E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Planet_Hively.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L6WTAR259W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					__EMBED_TUNES__,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Planet-Hively-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Planet Hively";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "(c) IRIS & UP ROUGH 2008";
+				INFOPLIST_KEY_NSMainNibFile = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iris.Planet-Hively";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		DA8DB193292C1719000D155E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Planet_Hively.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = L6WTAR259W;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Planet-Hively-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Planet Hively";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "(c) IRIS & UP ROUGH 2008";
+				INFOPLIST_KEY_NSMainNibFile = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iris.Planet-Hively";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA8DB17C292C1718000D155E /* Build configuration list for PBXProject "Planet-Hively" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA8DB18F292C1719000D155E /* Debug */,
+				DA8DB190292C1719000D155E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA8DB191292C1719000D155E /* Build configuration list for PBXNativeTarget "Planet-Hively" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA8DB192292C1719000D155E /* Debug */,
+				DA8DB193292C1719000D155E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA8DB179292C1718000D155E /* Project object */;
+}
